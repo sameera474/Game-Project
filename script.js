@@ -75,5 +75,7 @@ function flipCard() {
   console.log("flip card");
 
   let cardID = this.getAttribute("id");
-  console.log();
+  cardClicks.push(cardArray[cardID].name);
+  console.log(cardClicks);
+  this.setAttribute("src", cardArray[cardID].img);
 }
