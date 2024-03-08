@@ -71,11 +71,66 @@ function createBoard() {
 
 createBoard();
 let cardClicks = [];
+let cardClickedID = [];
+let cardsMatched = [];
+let scoreResults = [];
+
+console.log(cardArray);
+function checkForMatch() {
+  const cards = document.querySelectorAll("#board img");
+  if (cardClicks[0] == cardClicks[1]) {
+    console.log("cardClicks match");
+
+    cards[cardClickedID[0]].setAttribute("src", "images/white.png");
+    cards[cardClickedID[1]].setAttribute("src", "images/white.png");
+
+    cards[cardClickedID[0]].removeEventListener("click", flipCard);
+    cards[cardClickedID[1]].removeEventListener("click", flipCard);
+    cardsMatched.push(cardClicks);
+  } else {
+    console.log("cardClicks not match");
+    cards[cardClickedID[0]].setAttribute("src", "images/blank.png");
+    cards[cardClickedID[1]].setAttribute("src", "images/blank.png");
+  }
+  cardClicks = [];
+  cardClickedID = [];
+
+  if (cardsMatched.length === cardArray.length / 2) {
+    result.textContent =
+      "Congratulations you win the game." + " Your score = " + scoreValue();
+
+    function scoreValue() {
+      if (scoreResults.length <= 20) {
+        return (result.textContent =
+          "Congratulations you win the game." + " Your score = " + 100);
+      } else if (20 < scoreResults.length <= 30) {
+        return (result.textContent =
+          "You win the game but try again." +
+          " Your score = " +
+          (100 - (scoreResults.length - 20) * 10));
+      } else {
+        return (result.textContent = "Try a gain." + " Your score = " + 0);
+      }
+    }
+  }
+}
+
 function flipCard() {
   console.log("flip card");
 
   let cardID = this.getAttribute("id");
+
   cardClicks.push(cardArray[cardID].name);
-  console.log(cardClicks);
+  //   console.log(cardClicks);
+
+  cardClickedID.push(cardID);
+  //   console.log(cardClickedID);
+
   this.setAttribute("src", cardArray[cardID].img);
+  scoreResults.push(cardClicks); // Calculate the score
+  console.log(scoreResults.length);
+
+  if (cardClicks.length === 2) {
+    setTimeout(checkForMatch, 500);
+  }
 }
