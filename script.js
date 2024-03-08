@@ -62,9 +62,18 @@ function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement("img");
     card.setAttribute("src", "images/blank.png");
+    card.addEventListener("click", flipCard);
+
     card.setAttribute("id", i);
-    console.log(card, i);
+    board.appendChild(card);
   }
 }
 
 createBoard();
+let cardClicks = [];
+function flipCard() {
+  console.log("flip card");
+
+  let cardID = this.getAttribute("id");
+  console.log();
+}
