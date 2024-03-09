@@ -63,6 +63,7 @@ function createBoard() {
     const card = document.createElement("img");
     card.setAttribute("src", "images/blank.png");
     card.addEventListener("click", flipCard);
+    card.className = "magicCard";
 
     card.setAttribute("id", i);
     board.appendChild(card);
@@ -101,15 +102,11 @@ function checkForMatch() {
 
     function scoreValue() {
       if (scoreResults.length <= 20) {
-        return (result.textContent =
-          "Congratulations you win the game." + " Your score = " + 100);
+        return (result.textContent = 100);
       } else if (20 < scoreResults.length <= 30) {
-        return (result.textContent =
-          "You win the game but try again." +
-          " Your score = " +
-          (100 - (scoreResults.length - 20) * 10));
+        return (result.textContent = 100 - (scoreResults.length - 20) * 10);
       } else {
-        return (result.textContent = "Try a gain." + " Your score = " + 0);
+        return 0;
       }
     }
   }
@@ -133,4 +130,12 @@ function flipCard() {
   if (cardClicks.length === 2) {
     setTimeout(checkForMatch, 500);
   }
+}
+
+const reset_button = document.getElementById("resetButton");
+reset_button.addEventListener("click", resetFunction());
+
+function resetFunction() {
+  document.getElementById("board").innerHTML = "";
+  createBoard();
 }
