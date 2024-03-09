@@ -1,19 +1,10 @@
-@font-face {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans Regular"), local("OpenSans-Regular"),
-    url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhpOqc.ttf)
-      format("truetype");
-}
-
 #board {
   width: 100%;
   display: grid;
-  column-gap: 2px;
-  row-gap: 2px; /* Applies gap only between columns */
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  column-gap: 5px;
+  row-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -29,6 +20,14 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+#board img:hover {
+  color: bisque;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 html,
@@ -57,8 +56,12 @@ body {
 }
 
 #resetButton:hover {
-  background-color: rgb(2, 60, 128);
+  background-color: rgb(0, 119, 255);
   color: white;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 #result {

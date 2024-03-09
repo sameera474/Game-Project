@@ -70,7 +70,7 @@ function createBoard() {
   }
 }
 
-createBoard();
+// createBoard();
 let cardClicks = [];
 let cardClickedID = [];
 let cardsMatched = [];
@@ -102,9 +102,9 @@ function checkForMatch() {
 
     function scoreValue() {
       if (scoreResults.length <= 20) {
-        return (result.textContent = 100);
+        return 100;
       } else if (20 < scoreResults.length <= 30) {
-        return (result.textContent = 100 - (scoreResults.length - 20) * 10);
+        return 100 - (scoreResults.length - 20) * 10;
       } else {
         return 0;
       }
@@ -137,5 +137,14 @@ reset_button.addEventListener("click", resetFunction());
 
 function resetFunction() {
   document.getElementById("board").innerHTML = "";
+  document.getElementById("result").innerHTML = "";
+
+  cardClicks = [];
+  cardClickedID = [];
+  cardsMatched = [];
+  scoreResults = [];
+
+  shufflearray(cardArray);
+
   createBoard();
 }
