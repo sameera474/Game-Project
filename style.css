@@ -1,8 +1,19 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhpOqc.ttf)
+      format("truetype");
+}
+
 #board {
+  width: 100%;
   display: grid;
-  gap: 2px 2px 2px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* grid-row: 1fr 1fr 1fr 1fr; */
+  column-gap: 2px;
+  row-gap: 2px; /* Applies gap only between columns */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -11,6 +22,52 @@
   border-radius: 10px;
   background-color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-
   z-index: 1;
+}
+
+#board img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(1, 44, 44);
+}
+
+#resetButton {
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(0, 119, 255);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  color: bisque;
+}
+
+#resetButton:hover {
+  background-color: rgb(2, 60, 128);
+  color: white;
+}
+
+#result {
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+#your_results {
+  color: antiquewhite;
 }
