@@ -1,52 +1,16 @@
 const cardArray = [
-  {
-    name: "monkey",
-    img: "images/monkey.png",
-  },
-  {
-    name: "bear",
-    img: "images/bear.png",
-  },
-  {
-    name: "tortoise",
-    img: "images/tortoise.png",
-  },
-  {
-    name: "zebra",
-    img: "images/zebra.png",
-  },
-  {
-    name: "duck",
-    img: "images/duck.png",
-  },
-  {
-    name: "lion",
-    img: "images/lion.png",
-  },
-  {
-    name: "monkey",
-    img: "images/monkey.png",
-  },
-  {
-    name: "bear",
-    img: "images/bear.png",
-  },
-  {
-    name: "tortoise",
-    img: "images/tortoise.png",
-  },
-  {
-    name: "zebra",
-    img: "images/zebra.png",
-  },
-  {
-    name: "duck",
-    img: "images/duck.png",
-  },
-  {
-    name: "lion",
-    img: "images/lion.png",
-  },
+  { name: "monkey", img: "images/monkey.png" },
+  { name: "bear", img: "images/bear.png" },
+  { name: "tortoise", img: "images/tortoise.png" },
+  { name: "zebra", img: "images/zebra.png" },
+  { name: "duck", img: "images/duck.png" },
+  { name: "lion", img: "images/lion.png" },
+  { name: "monkey", img: "images/monkey.png" },
+  { name: "bear", img: "images/bear.png" },
+  { name: "tortoise", img: "images/tortoise.png" },
+  { name: "zebra", img: "images/zebra.png" },
+  { name: "duck", img: "images/duck.png" },
+  { name: "lion", img: "images/lion.png" },
 ];
 
 function shufflearray(any_array) {
