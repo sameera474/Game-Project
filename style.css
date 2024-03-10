@@ -81,10 +81,10 @@ body {
 }
 
 #your_results {
-  color: antiquewhite;
+  color: #faebd7;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
   html,
   body {
     height: 100%;
