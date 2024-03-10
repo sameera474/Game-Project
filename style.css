@@ -16,8 +16,8 @@
 }
 
 #board img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -94,5 +94,10 @@ body {
     align-items: center;
     font-family: "Open Sans", sans-serif;
     background-color: rgb(2, 38, 87);
+  }
+  #board img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
   }
 }
