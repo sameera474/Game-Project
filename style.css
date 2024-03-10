@@ -1,5 +1,4 @@
 #board {
-  width: 100%;
   display: grid;
   column-gap: 5px;
   row-gap: 5px;
@@ -17,8 +16,8 @@
 }
 
 #board img {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 
@@ -27,7 +26,7 @@
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 html,
@@ -38,7 +37,17 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(1, 44, 44);
+  background-color: rgb(2, 38, 87);
+}
+
+#board_Reset {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(25, 0, 69);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 #resetButton {
@@ -48,20 +57,20 @@ body {
   width: 100px;
   margin: 10px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid rgb(147, 159, 239);
   border-radius: 10px;
-  background-color: rgb(0, 119, 255);
+  background-color: rgb(46, 49, 149);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   color: bisque;
 }
 
 #resetButton:hover {
-  background-color: rgb(0, 119, 255);
+  background-color: rgb(0, 219, 253);
   color: white;
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 #result {
@@ -73,4 +82,17 @@ body {
 
 #your_results {
   color: antiquewhite;
+}
+
+@media only screen and (max-width: 1400px) {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(2, 38, 87);
+  }
 }
