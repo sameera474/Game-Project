@@ -98,16 +98,6 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-  html,
-  body {
-    height: 80%;
-    margin: 0;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    font-family: "Open Sans", sans-serif;
-    background-color: rgb(2, 38, 87);
-  }
   #board img {
     width: 100px;
     height: 100px;
