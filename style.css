@@ -98,6 +98,10 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  body {
+    text-align: center;
+    text-wrap: wrap;
+  }
   #board img {
     width: 80px;
     height: 80px;
