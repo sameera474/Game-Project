@@ -37,6 +37,9 @@ body h1 {
 }
 
 body {
+  background-color: rgb(2, 38, 87);
+}
+.main_Container {
   font-size: 30px;
   height: 100%;
   margin: 0;
@@ -45,15 +48,16 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(2, 38, 87);
+
+  color: white;
 }
 
-#board_Reset {
+#boardWithReset {
   margin: 10px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: rgb(25, 0, 69);
+  background-color: rgb(253, 251, 255);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -62,14 +66,14 @@ body {
   font-size: large;
   font-weight: bold;
   align-items: center;
-  width: 100px;
+  width: 200px;
   margin: 10px;
   padding: 10px;
   border: 1px solid rgb(147, 159, 239);
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: rgb(46, 49, 149);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  color: bisque;
+  color: rgb(255, 255, 255);
 }
 
 #resetButton:hover {
@@ -85,10 +89,11 @@ body {
   font-size: large;
   font-weight: bold;
   align-items: center;
+  font-size: 30px;
   color: rgb(255, 255, 255);
 }
 
-#your_results {
+.your_results {
   color: #faebd7;
 }
 

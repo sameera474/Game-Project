@@ -98,7 +98,7 @@ function checkForMatch() {
 
   if (cardsMatched.length === cardArray.length / 2) {
     result.textContent =
-      "Congratulations you win the game." + " Your score = " + scoreValue();
+      "Congratulations you win the game.." + " Your score = " + scoreValue();
 
     function scoreValue() {
       if (scoreResults.length <= 20) {
